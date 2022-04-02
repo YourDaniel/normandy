@@ -1,0 +1,24 @@
+html {
+    background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+    font-family: Consolas, serif;
+}
+h1 {
+    color: ghostwhite;
+    text-align: center;
+    font-size: 60px;
+}
+h2 {
+    font-size: 40px;
+}
+div {
+    font-size: 20px;
+}
+div.description h2 {
+    text-align: center;
+}
+div.description {
+    color: cadetblue;
+    text-align: left;
+    padding-left: 500px;
+    padding-right: 500px;
+}
