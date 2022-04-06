@@ -1,0 +1,44 @@
+@import "../../styles/mixins";
+
+.themeSwitcher {
+  display: block;
+
+}
+
+.themeSwitcher__list {
+  display: flex;
+}
+
+.themeSwitcher__item {
+  display: block;
+  width: 8rem;
+  margin: 0 0.6rem;
+  border: 0.4rem solid transparent;
+  transition: 0.2s;
+  transition-property: border;
+
+  &:hover {
+    border-color: rgba(#ffb50e, 0.4);
+  }
+
+  &.active {
+    border-color: #ffb50e;
+  }
+
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.themeSwitcher__button {
+  display: block;
+}
+
+.themeSwitcher__image {
+  display: block;
+}

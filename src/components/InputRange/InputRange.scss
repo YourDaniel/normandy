@@ -1,0 +1,20 @@
+@import "../../styles/mixins";
+
+.InputRange {
+  display: block;
+}
+
+.thumb {
+  display: block;
+  height: 2.5rem;
+  width: 3rem;
+  background-color: #fafcfb;
+
+  &:hover {
+    background-color: lighten($primary, 15%);
+  }
+
+  &:active {
+    background-color: lighten($primary, 30%);
+  }
+}
