@@ -1,0 +1,33 @@
+@import "../../styles/mixins";
+
+.ReturnButton {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 4rem;
+  font-weight: bold;
+
+
+  &:hover {
+    span {
+      color: #ffb50e;
+    }
+
+    svg {
+      fill: #ffb50e;
+    }
+  }
+}
+
+.returnButton__image {
+  width: 5rem;
+  margin-right: 2rem;
+
+  fill: #fafcfb;
+  pointer-events: none;
+}
+
+.returnButton__text {
+  pointer-events: none;
+}

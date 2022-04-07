@@ -1,0 +1,226 @@
+@import "../../styles/mixins";
+
+.Personalization {
+  display: block;
+
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  padding-top: 1rem;
+
+}
+
+.create {
+  display: block;
+}
+
+.result {
+  display: block;
+  width: 60rem;
+}
+
+.title {
+  display: block;
+  font-size: 4rem;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 5rem;
+  color: $primary;
+}
+
+.subtitle {
+  display: block;
+  font-size: 2.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 2.2rem;
+}
+
+.avatarsSlider {
+  width: 30rem;
+
+  box-shadow: 0 0 30px 1px black;
+
+  :global {
+
+    .slick-arrow {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 7rem;
+      height: 7rem;
+      flex-shrink: 0;
+      font-size: 0;
+      background-image: url('./assets/arrow.svg') !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      background-size: contain !important;
+      margin: 0 1rem;
+      position: absolute;
+      background-color: black;
+      z-index: 10;
+      border-radius: 50%;
+      right: -12rem;
+
+      span {
+        font-size: 0;
+      }
+
+      &.slick-disabled {
+        opacity: 0.3;
+        pointer-events: none;
+      }
+
+      &:active {
+        opacity: 0.6;
+      }
+
+      &.slick-prev {
+        transform: rotate(180deg) ;
+        top: 9rem;
+
+      }
+
+      &.slick-next {
+        top: 21rem;
+      }
+    }
+  }
+}
+
+.avatar {
+  display: block;
+}
+
+.statuses {
+  position: relative;
+  width: 32rem;
+  :global {
+
+    .slick-arrow {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 4rem;
+      height: 4rem;
+      flex-shrink: 0;
+      font-size: 0;
+      background-image: url('./assets/arrow.svg') !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      background-size: contain !important;
+
+      position: absolute;
+      background-color: black;
+      z-index: 10;
+      border-radius: 50%;
+      top: 50%;
+
+      span {
+        font-size: 0;
+      }
+
+      &.slick-disabled {
+        opacity: 0.3;
+        pointer-events: none;
+      }
+
+      &:active {
+        opacity: 0.6;
+      }
+
+      &.slick-prev {
+        transform: rotate(180deg) translateY(50%);
+        left: 0;
+
+      }
+
+      &.slick-next {
+        right: 0;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+.status {
+  display: block;
+  text-align: center;
+  font-size: 2.3rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.column {
+  width: 45rem;
+  position: relative;
+  
+  &::after {
+    content: "";
+    display: block;
+    height: 35rem;
+    width: 15rem;
+    position: absolute;
+    top: 9rem;
+    right: -16rem;
+    background-image: url('./assets/next-double.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &:first-child {
+    &::after {
+      background-image: url('./assets/next.svg');
+      right: -23rem;
+    }
+  }
+
+  &:last-child {
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.block {
+  display: block;
+  margin-bottom: 5rem;
+
+
+  &:last-child {
+    border: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 4rem;
+}
+
+.input {
+  width: 32rem;
+  height: 5.4rem;
+  color: black;
+  padding: 2rem;
+  font-size: 2rem;
+}

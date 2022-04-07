@@ -1,0 +1,22 @@
+@import "../../styles/mixins";
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 24rem;
+  height: 6rem;
+}
+
+.primary {
+  background-color: $primary;
+  font-size: 3rem;
+  font-weight: bold;
+  border: 2px solid $primary;
+  color: $black;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
