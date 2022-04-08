@@ -4,7 +4,7 @@ export default {
         second: 'Нормандия'
     },
     menu: {
-        single: 'Одиночная игра',
+        single: 'Старт',
         multiplayer: 'Сетевая игра',
         settings: 'Настройки',
         collections: 'Коллекции',

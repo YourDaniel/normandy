@@ -31,7 +31,7 @@ export default function Menu(props) {
                 </div>
                 <ul className={styles.list}>
                     <li className={styles.item}>
-                        <Link className={styles.link} data-click-sound to={'/'}>{menu.single}</Link>
+                        <Link className={styles.link} data-click-sound to={'/start'}>{menu.single}</Link>
                     </li>
                     <li className={styles.item}>
                         <Link className={styles.link} data-click-sound to={'/personalization'}>{menu.personalization}</Link>

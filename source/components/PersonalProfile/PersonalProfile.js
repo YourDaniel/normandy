@@ -3,6 +3,8 @@ import styles from './PersonalProfile.scss';
 
 export default function PersonalProfile({color, avatar, name, status}) {
     console.log('color', color)
+    
+    
     return (
         <div className={styles.block}>
             <div className={styles.avatar} style={{borderColor: color, backgroundImage: `url(${avatar})`}}>
