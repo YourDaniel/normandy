@@ -8,7 +8,9 @@
 
   position: relative;
   background-image: url('./assets/bg.png');
-  background-size: cover;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .button {

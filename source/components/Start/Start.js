@@ -1,15 +1,38 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './Start.scss';
 import Layout from "../Layout";
 import Button from "../Button";
 import PersonalProfile from "../PersonalProfile";
 import {useSelector} from "react-redux";
+import { Redirect } from "react-router-dom";
+
 const level1map = require('./assets/level-1.png')
 
 export default function Start(props) {
     const {
         avatarURL, name, status, color
     } = useSelector(state => state.user)
+
+  
+    
+    const [buttonText, changeButtonText] = useState('Начать')
+    const [started, changeStarted] = useState(false)
+    
+    function onStart() {
+        // TODO: refactor it
+        (function loop (i) {
+            setTimeout(function () {
+                changeButtonText(`..${i}..`)
+                if (--i >= 0) {
+                    loop(i);
+                }
+                
+                else {
+                    changeStarted(true)
+                }
+            }, 1000)
+        })(5);
+    }
     
     return (
         <Layout containered={true} title={false} back={'/'} withBackgroundImage={false}>
@@ -34,7 +57,13 @@ export default function Start(props) {
                             <img src={level1map} alt=""/>
                         </div>
                         <div className={styles.button}>
-                            <Button to={'/menu'} id={'start-button'}>Начать</Button>
+                            {
+                                started ?
+                                    <Redirect to="/rooms/1" />
+                                    :
+                                    <Button onClick={onStart} id={'start-button'}>{buttonText}</Button>
+                            }
+                          
                         </div>
                     </div>
                     <div className={`${styles.aside} ${styles.right}`}>
