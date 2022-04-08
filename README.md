@@ -23,3 +23,15 @@ React template/boilerplate
 5. Press 'npm run start'
 6. If your browser opened http://localhost:3000/ = you are winner
 
+
+
+
+## Tasks
+
+#### Add a new function component:
+```
+gulp add-func --name YourName
+```
+#### Add a new class component:
+```
+gulp add-class --name YourName

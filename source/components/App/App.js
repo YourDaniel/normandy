@@ -13,6 +13,7 @@ import {LanguageProvider, LanguagesData} from '../../localisation';
 import AudioController from "../AudioController";
 import Start from "../Start";
 import Personalization from "../Personalization";
+import Game from "../Game";
 
 export default function App(props) {
     const {activeLanguage} = useSelector(state => state.settings.languages)
@@ -79,6 +80,9 @@ export default function App(props) {
                             </Route>
                             <Route exact path='/collections'>
                                 <Collections/>
+                            </Route>
+                            <Route exact path='/rooms/:room'>
+                                <Game/>
                             </Route>
                         </Switch>
                     </ScrollToTop>
