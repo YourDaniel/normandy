@@ -1,10 +1,10 @@
 @import "../../styles/mixins";
 
-.Field {
+.field {
   display: block;
+
   position: relative;
-  top: 100rem;
-  left: 80rem
+  transform: translate(75rem, 75rem);
 }
 
 
@@ -15,8 +15,8 @@
   align-items: flex-start;
   flex-wrap: wrap;
 
-  width: 300rem;
-  height: 300rem;
+  width: 250rem;
+  height: 250rem;
   background: transparent;
 }
 
@@ -30,8 +30,8 @@
 
 .cell {
   position: relative;
-  width: 30rem;
-  height: 30rem;
+  width: 25rem;
+  height: 25rem;
   background-size: contain;
   filter: grayscale(20%);
 

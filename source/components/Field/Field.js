@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Field.scss';
+import Draggable from 'react-draggable';
 
 export default function Field(props) {
     const level = {
@@ -106,10 +107,17 @@ export default function Field(props) {
         )
     }
     return (
-        <div className={styles.Field}>
-            <div className={styles.table}>
-                {rows}
-            </div>
+        <div className={styles.field}>
+            <Draggable
+            
+            
+            >
+                <div className={styles.table}>
+                    {rows}
+                </div>
+            </Draggable>
+        
         </div>
-    );
+    )
+        ;
 }
