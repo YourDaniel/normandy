@@ -33,7 +33,7 @@
   width: 30rem;
   height: 30rem;
   background-size: contain;
-  filter: contrast(0.9);
+  filter: grayscale(20%);
 
 
   &:nth-child(2n) {
