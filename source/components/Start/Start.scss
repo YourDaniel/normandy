@@ -1,0 +1,115 @@
+@import "../../styles/mixins";
+
+.start {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  background-image: url('./assets/bg.png');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  opacity: 0;
+  animation: button 1s ease-in forwards ;
+  animation-delay: 1.5s;
+
+  @keyframes button {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+.left {
+  transform: translateX(-100vw);
+  animation: aside 1s ease-in forwards ;
+}
+
+.right {
+  transform: translateX(100vw);
+  animation: aside 1s ease-in forwards ;
+  animation-delay: 0.5s;
+}
+
+@keyframes aside {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 130rem;
+  padding-top: 2rem;
+  margin: 0 auto;
+}
+
+.aside {
+  padding-top: 8rem;
+
+}
+
+.center {
+  width: 70rem;
+}
+
+.top {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+
+  width: 50rem;
+  margin: 0 auto;
+}
+
+.level {
+  display: block;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.name {
+  display: block;
+  font-size: 3.5rem;
+  color: $primary;
+}
+
+.map {
+  width: 100%;
+  margin-top: -10rem;
+  margin-bottom: -20rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.nation {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+

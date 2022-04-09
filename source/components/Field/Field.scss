@@ -1,0 +1,57 @@
+@import "../../styles/mixins";
+
+.field {
+  display: block;
+
+  position: relative;
+  transform: translate(75rem, 75rem);
+}
+
+
+.table {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  width: 250rem;
+  height: 250rem;
+  background: transparent;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+}
+
+.cell {
+  position: relative;
+  width: 25rem;
+  height: 25rem;
+  background-size: contain;
+  filter: grayscale(20%);
+
+
+  &:nth-child(2n) {
+    top: 15rem;
+  }
+
+  &.active {
+    box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.9);
+    outline: 5px solid transparent;
+    outline-offset: -5px;
+
+    &:hover {
+      //position: relative;
+      //z-index: 10;
+      //outline-color: $primary;
+    }
+
+  }
+
+
+}

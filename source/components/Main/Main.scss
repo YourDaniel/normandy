@@ -1,0 +1,9 @@
+@import "../../styles/mixins";
+
+.Main {
+  display: block;
+  background: blue;
+  @include tablet {
+
+  }
+}
