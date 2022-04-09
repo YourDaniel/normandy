@@ -10,7 +10,7 @@ module.exports = {
     output: {
         path: paths.build,
         filename: 'js/[name].[contenthash].bundle.js',
-        publicPath: '/',
+        publicPath: '',
         assetModuleFilename: '[path][name].[ext]?[hash]'
     },
     plugins: [
