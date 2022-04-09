@@ -22,7 +22,6 @@ build/index.html
 build/components
 build/fonts
 resources
-debug.log
 .vscode
 /.vscode
 
