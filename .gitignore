@@ -12,6 +12,7 @@ debug
 debug.log
 /.idea
 
+
 # production
 #build
 build
@@ -44,3 +45,7 @@ composer.phar
 # You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
 # composer.lock
 /build/app/DataBase.php
+
+#python
+__pycache__
+api/__pycache__
