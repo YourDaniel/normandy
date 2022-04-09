@@ -13,10 +13,4 @@ def favicon():
 
 @bp.route('/')
 def home_page():
-    print()
-    print('ROOT_PATH', bp.root_path)
-    print('__FILE__', __file__)
-    print()
     return render_template('index.html')
-
-
