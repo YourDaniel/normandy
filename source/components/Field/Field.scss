@@ -89,6 +89,8 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+
+
 }
 
 .soldier {
@@ -99,9 +101,13 @@
   background-color: transparent;
   border-radius: 50%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto 8rem;
+  background-position: center center;
   box-shadow:  0.3rem 0.3rem 0.3rem 0.1rem rgba(0,0,0,0.1), inset -0.1rem -0.2rem 0.1rem 0.1rem rgba(0,0,0,0.2);
 
+  &:hover {
+    border: 0.5rem solid $primary;
+  }
 
   &.selected {
     border: 0.5rem solid $primary;
