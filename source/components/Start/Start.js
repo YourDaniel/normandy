@@ -3,6 +3,7 @@ import styles from './Start.scss';
 import Layout from "../Layout";
 import Button from "../Button";
 import PersonalProfile from "../PersonalProfile";
+import RoundedProgress from "../RoundedProgress";
 import {useSelector} from "react-redux";
 import { Redirect } from "react-router-dom";
 
@@ -15,23 +16,41 @@ export default function Start(props) {
 
   
     
-    const [buttonText, changeButtonText] = useState('Начать')
-    const [started, changeStarted] = useState(false)
+    const [counter, changeCounter] = useState(3)
+    const [buttonStatus, changeButtonStatus] = useState('initial')
     
     function onStart() {
         // TODO: refactor it
+        changeButtonStatus('countdown');
+        
         (function loop (i) {
             setTimeout(function () {
-                changeButtonText(`..${i}..`)
+                changeCounter(i)
                 if (--i >= 0) {
                     loop(i);
                 }
                 
                 else {
-                    changeStarted(true)
+                    changeButtonStatus('redirect')
                 }
             }, 1000)
-        })(5);
+        })(2);
+    }
+    
+    let buttonElem = null;
+    
+    switch (buttonStatus) {
+        case 'initial':
+            buttonElem = <Button onClick={onStart} id={'start-button'}>Начать</Button>
+            break;
+        case 'countdown':
+            buttonElem = <div className={styles.countdown}>
+                <RoundedProgress value={counter} maxValue={3} text={counter}/>
+            </div>
+            break;
+        case 'redirect':
+            buttonElem = <Redirect to="/rooms/1" />
+            break;
     }
     
     return (
@@ -57,13 +76,7 @@ export default function Start(props) {
                             <img src={level1map} alt=""/>
                         </div>
                         <div className={styles.button}>
-                            {
-                                started ?
-                                    <Redirect to="/rooms/1" />
-                                    :
-                                    <Button onClick={onStart} id={'start-button'}>{buttonText}</Button>
-                            }
-                          
+                            {buttonElem}
                         </div>
                     </div>
                     <div className={`${styles.aside} ${styles.right}`}>

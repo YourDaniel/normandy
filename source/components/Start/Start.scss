@@ -20,6 +20,7 @@
   opacity: 0;
   animation: button 1s ease-in forwards ;
   animation-delay: 1.5s;
+  height: 10rem;
 
   @keyframes button {
     0% {
@@ -113,3 +114,7 @@
   text-transform: uppercase;
 }
 
+.countdown {
+  width: 10rem;
+  height: 10rem;
+}
