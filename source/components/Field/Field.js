@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './Field.scss';
 import Draggable from 'react-draggable';
+import generateCells from "./generateCells";
 
 export default function Field(props) {
     const level = {
@@ -10,19 +11,32 @@ export default function Field(props) {
                     cells: [
                         {
                             id: 1,
-                            image: false
+                            image: false,
+                            soldiers: []
                         },
                         {
                             id: 2,
-                            image: '17b'
+                            image: '17b',
+                            soldiers: [
+                                {
+                                    type: 'rifleman',
+                                    image: 'usa_rifleman_b'
+                                },
+                                {
+                                    type: 'rifleman',
+                                    image: 'usa_rifleman_a'
+                                }
+                            ]
                         },
                         {
                             id: 3,
-                            image: '7a'
+                            image: '7a',
+                            soldiers: []
                         },
                         {
                             id: 4,
-                            image: '4b'
+                            image: '4b',
+                            soldiers: []
                         }
                     ]
                 },
@@ -30,19 +44,23 @@ export default function Field(props) {
                     cells: [
                         {
                             id: 1,
-                            image: '2b'
+                            image: '2b',
+                            soldiers: []
                         },
                         {
                             id: 2,
-                            image: '13b'
+                            image: '13b',
+                            soldiers: []
                         },
                         {
                             id: 3,
-                            image: '12b'
+                            image: '12b',
+                            soldiers: []
                         },
                         {
                             id: 4,
-                            image: '5b'
+                            image: '5b',
+                            soldiers: []
                         }
                     ]
                 },
@@ -50,19 +68,23 @@ export default function Field(props) {
                     cells: [
                         {
                             id: 1,
-                            image: '16b'
+                            image: '16b',
+                            soldiers: []
                         },
                         {
                             id: 2,
-                            image: '3b'
+                            image: '3b',
+                            soldiers: []
                         },
                         {
                             id: 3,
-                            image: '8a'
+                            image: '8a',
+                            soldiers: []
                         },
                         {
                             id: 4,
-                            image: '11b'
+                            image: '11b',
+                            soldiers: []
                         }
                     ]
                 },
@@ -70,7 +92,8 @@ export default function Field(props) {
                     cells: [
                         {
                             id: 1,
-                            image: '8a'
+                            image: '8a',
+                            soldiers: []
                         }
                     ]
                 }
@@ -78,42 +101,17 @@ export default function Field(props) {
         }
     }
     
+   
+   
     
-    const rows = [];
+    const field = generateCells(level);
     
-    for (let rowId = 1; rowId <= 10; rowId++) {
-        const cells = [];
-        for (let cellId = 1; cellId <= 10; cellId++) {
-            let fieldBg = null;
-            // TODO: refactor it
-            if (level.field.rows[rowId] && level.field.rows[rowId].cells[cellId - 1] && level.field.rows[rowId].cells[cellId - 1].image) {
-                fieldBg = `/public/fields/${level.field.rows[rowId].cells[cellId - 1].image}.png`
-            }
-            cells.push(
-                <div
-                    id={`row_${rowId}_cell_${cellId}`}
-                    className={`${styles.cell} ${fieldBg ? styles.active : null}`}
-                    style={{
-                        backgroundImage: `url(${fieldBg})`
-                    }}
-                />
-            )
-        }
-        
-        rows.push(
-            <div id={`row_${rowId}`} className={styles.row}>
-                {cells}
-            </div>
-        )
-    }
     return (
         <div className={styles.field}>
             <Draggable
-            
-            
             >
                 <div className={styles.table}>
-                    {rows}
+                    {field}
                 </div>
             </Draggable>
         

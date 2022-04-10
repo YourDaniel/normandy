@@ -32,26 +32,79 @@
   position: relative;
   width: 25rem;
   height: 25rem;
-  background-size: contain;
-  filter: grayscale(20%);
-
+  opacity: 0;
 
   &:nth-child(2n) {
     top: 15rem;
   }
 
   &.active {
-    box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.9);
-    outline: 5px solid transparent;
-    outline-offset: -5px;
-
-    &:hover {
-      //position: relative;
-      //z-index: 10;
-      //outline-color: $primary;
-    }
+    opacity: 1;
+    box-shadow: inset 0 0 0.3rem 0.1rem rgba(0,0,0,0.9);
 
   }
 
+  &.neighbor .cell_background {
+    //outline-color: $primary;
+    filter: grayscale(30%);
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($primary, 0.4);
+    }
+  }
 
+
+  &.selected .cell_background {
+    filter: grayscale(60%);
+  }
+
+
+}
+
+.cell_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  outline: 0.5rem solid transparent;
+  filter: grayscale(20%);
+  outline-offset: -0.7rem;
+}
+
+.soldiers {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 27rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.soldier {
+  width: 8rem;
+  height: 8rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow:  0.3rem 0.3rem 0.3rem 0.1rem rgba(0,0,0,0.1), inset -0.1rem -0.2rem 0.1rem 0.1rem rgba(0,0,0,0.2);
+
+
+  &.selected {
+    border: 0.5rem solid $primary;
+
+  }
 }
