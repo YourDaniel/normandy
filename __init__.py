@@ -8,6 +8,7 @@ root_path = os.path.dirname(__file__)
 
 def create_app():
     app = Flask('normandy',
+                static_url_path='',
                 template_folder=os.path.join(root_path, 'build'),
                 static_folder=os.path.join(root_path, 'build')
                 )
