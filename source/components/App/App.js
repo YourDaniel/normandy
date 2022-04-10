@@ -14,6 +14,7 @@ import AudioController from "../AudioController";
 import Start from "../Start";
 import Personalization from "../Personalization";
 import Game from "../Game";
+import Test from "../Test";
 
 export default function App(props) {
     const {activeLanguage} = useSelector(state => state.settings.languages)
@@ -83,6 +84,9 @@ export default function App(props) {
                             </Route>
                             <Route exact path='/rooms/:room'>
                                 <Game/>
+                            </Route>
+                            <Route exact path='/test'>
+                                <Test/>
                             </Route>
                         </Switch>
                     </ScrollToTop>

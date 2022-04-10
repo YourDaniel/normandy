@@ -45,6 +45,15 @@ export default function Menu(props) {
                     <li className={styles.item}>
                         <Link className={styles.link} data-click-sound to={'/rules'}>{menu.rules}</Link>
                     </li>
+                    {/*TODO: test route*/}
+                    <li className={styles.item}>
+                        <Link className={styles.link} data-click-sound to={'/test'}>=== TEST PAGE ===</Link>
+                    </li>
+                    
+                    
+                    <li className={styles.item}>
+                        <Link className={styles.link} data-click-sound to={'/collections'}>{menu.collections}</Link>
+                    </li>
                     <li className={styles.item}>
                         <button className={styles.link} data-click-sound onClick={() => {
                             window.opener = null;

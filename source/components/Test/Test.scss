@@ -1,0 +1,24 @@
+@import "../../styles/mixins";
+
+.test {
+  display: block;
+  position: relative;
+  z-index: 10;
+
+  h2 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  input {
+    height: 3rem;
+    width: 30rem;
+    font-size: 2rem;
+    color: black;
+  }
+
+  p {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+}
