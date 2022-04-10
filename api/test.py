@@ -1,10 +1,7 @@
 from flask import Blueprint, jsonify, request
-import os
 
-root_path = os.path.dirname(os.path.dirname(__file__))
-bp = Blueprint('test', __name__, url_prefix='/api',
-               template_folder=os.path.join(root_path, 'build'),
-               static_folder=os.path.join(root_path, 'build'))
+
+bp = Blueprint('test', __name__, url_prefix='/api')
 
 
 @bp.route('/test', methods=['POST'])
