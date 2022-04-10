@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, send_from_directory
+from flask import Blueprint, render_template
 import os
 
 root_path = os.path.dirname(os.path.dirname(__file__))

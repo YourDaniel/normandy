@@ -1,3 +1,3 @@
-from . import home
+from . import home, test
 
-MODULES = [home]
+MODULES = [home, test]
