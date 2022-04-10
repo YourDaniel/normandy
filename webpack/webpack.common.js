@@ -11,7 +11,7 @@ module.exports = {
         path: paths.build,
         filename: 'js/[name].[contenthash].bundle.js',
         publicPath: 'auto',
-        assetModuleFilename: '[path][name].[ext]?[hash]'
+        assetModuleFilename: '[path][name][ext]?[hash]'
     },
     plugins: [
         new CleanWebpackPlugin(),
