@@ -2,6 +2,8 @@
 
 .game {
   display: block;
+  position: relative;
+  height: 100vh;
 }
 
 .battleground {
@@ -16,5 +18,201 @@
   width: 100%;
   height: 100vh;
 
+
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 14rem;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.timer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: 10rem;
+  background-color: rgba(black, 0.8);
+  font-size: 3rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 4rem;
+  pointer-events: none;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 28rem;
+  z-index: 10;
+  pointer-events: auto;
+  background-color: rgba(#0e0e0e, 1);
+}
+
+.bottom_text {
+  display: block;
+  font-size: 2rem;
+
+  width: 12rem;
+  margin-right: 2rem;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 16rem;
+  margin: 0 0.7rem;
+  position: relative;
+  border: 3px solid transparent;
+  border-radius: 5px;
+  overflow: hidden;
+  color: white;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.active {
+    border-color: $primary;
+
+  }
+
+  img {
+    display: block;
+    width: 100%;
+
+  }
+}
+
+.card_inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(black, 0.9);
+  padding: 1.5rem 1.2rem;
+}
+
+.card_title {
+  display: block;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: normal;
+  margin-bottom: 2rem;
+}
+
+
+
+
+
+.card_actions {
+
+}
+
+
+.card_action {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.card_action_icon {
+  display: none;
+
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+
+}
+
+.card_action_name {
+  font-size: 1.5rem;
+}
+
+.card_action_value {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: black;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+
+
+.bottom_left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 5rem;
+}
+
+
+.bottom_descriptions {
+  width: 40rem;
+  display: block;
+}
+
+.bottom_description {
+  display: block;
+
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.personal {
+  display: block;
+  margin-bottom: 2rem;
+
+}
+
+.status {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  color: $primary;
 
 }

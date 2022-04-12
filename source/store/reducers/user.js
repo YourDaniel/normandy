@@ -2,7 +2,7 @@ const CHANGE_OPTION = "CHANGE_OPTION";
 
 
 const defaultState = {
-    avatarURL: "public/avatars/1.jpg",
+    avatarURL: "/public/avatars/1.jpg",
     name: 'John',
     status: 'Soldier',
     color: '#ffb50e'
